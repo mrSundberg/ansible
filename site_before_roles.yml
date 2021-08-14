@@ -11,21 +11,13 @@
     changed_when: false
     when: ansible_distribution == "CentOS"
 
-  - name: update repo cache (Ubuntu / Debian)
+  - name: update repo cache (Ubuntu)
     tags: always
     apt:
       update_cache: yes
     changed_when: false
-    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
- 
-  # Placeholder for key management later on... 
-  # Add new key before old and use state: absent
-  - name: add ssh key for ansible
-    tags: always
-    authorized_key:
-      user: ansible
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC4WrarLu9VtKjdlM5zh6SwK8vO9H1TpkMsh9ar02vmL Ansible"
-      
+    when: ansible_distribution == "Ubuntu"
+
 - hosts: web_servers
   become : true
   tasks:

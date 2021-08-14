@@ -1,3 +1,9 @@
+# homeserver
+172.16.10.5
+
+# NOC
+172.16.15.33
+
 [web_servers]
 i5.wan.mress.se
 
