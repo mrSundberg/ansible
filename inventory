@@ -1,2 +1,11 @@
-dell-755.lan.mress.se
-hp-2.lan.mress.se
+[web_servers]
+i5.wan.mress.se
+
+[file_servers]
+i5.wan.mress.se
+
+[db_servers]
+i5.wan.mress.se
+
+[kubernetes_servers]
+i5.wan.mress.se
